@@ -43,6 +43,7 @@ else
         eval "chmod +x $PWD/sign-$_ftype"
         eval "$PWD/sign-$_ftype"
     else
+        cd elmsign
         echo "在$PWD/elmsign目录、$PWD目录下均未找到文件sign-$_ftype,尝试拉取远程仓库文件sign-$_ftype"
         download_elm
     fi

@@ -4,8 +4,9 @@
 # 会修改 /etc/hosts 文件 恢复原状请自行去除
 #切换linux格式 dos2unix elmsign.sh
 #pwd
-read -p "请输入端口号（默认80）：" setport
-[ -z $setport ] && setport=80
+#read -p "请输入端口号（默认80）：" setport
+#[ -z $setport ] && setport=80
+setport=80
 if grep -q "api\.94wan\.fun" /etc/hosts; then
     sed -i -E "s/(api\.94wan\.fun[[:space:]]+127\.0\.0\.1)[0-9]+/\1/g" /etc/hosts
     #sed -i -E "s/(api\.94wan\.fun[[:space:]]+127\.0\.0\.1:)[0-9]+/\1$setport/g" /etc/hosts
